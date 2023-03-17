@@ -1,9 +1,14 @@
 import java.util.Map;
 import java.util.Set;
-
+import java.util.HashMap;
 public class Warehouse {
     private Map<String, Integer> warehousePrices;
     private Map<String, Integer> warehouseStocks;
+
+    public Warehouse() {
+        this.warehousePrices = new HashMap<>();
+        this.warehouseStocks = new HashMap<>();
+    }
 
     public void addProduct(String product, int price, int stock){
         warehousePrices.put(product, price);
